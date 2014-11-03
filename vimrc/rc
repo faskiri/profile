@@ -1,0 +1,26 @@
+set rtp+=PROFILE_TOP/vimrc
+
+let g:ctrlp_regexp = 1
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+set rtp^=PROFILE_TOP/vimrc/third-party/ctrlp
+
+"set nocompatible              " be iMproved, required
+"filetype off                  " required
+"
+"" set the runtime path to include Vundle and initialize
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
+"" alternatively, pass a path where Vundle should install plugins
+""let path = '~/some/path/here'
+""call vundle#rc(path)
+"
+"" let Vundle manage Vundle, required
+"Plugin 'gmarik/vundle'
+"
+"let g:ycm_extra_conf_globlist = ['~/.ycm_extra_conf.py']
+"Bundle 'Valloric/YouCompleteMe'
+"
+"let g:ctrlp_regexp = 1
+"let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+"Bundle 'kien/ctrlp.vim'
+"

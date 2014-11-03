@@ -1,0 +1,22 @@
+#!/bin/bash
+
+red='\e[0;31m'
+green='\e[0;32m'
+NC='\e[0m' # No Color
+
+function cmp()
+{
+  src=$1
+  dst=$2
+
+  echo -e "${green}Comparing $src with $dst${NC}"
+  diff $src $dst || echo -e "${red}cp $src $dst${NC}"
+}
+
+
+PROFILE_TOP=`dirname $( readlink -f $0 )`
+tmpvimrc=`tempfile`
+sed "s#PROFILE_TOP#$PROFILE_TOP#g" $PROFILE_TOP/vimrc/rc > $tmpvimrc
+cmp $tmpvimrc ~/.vimrc
+cmp $PROFILE_TOP/screenrc ~/.screenrc
+cmp $PROFILE_TOP/gdbinit ~/.gdbinit
