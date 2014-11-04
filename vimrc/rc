@@ -4,6 +4,8 @@ let g:ctrlp_regexp = 1
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
 set rtp^=PROFILE_TOP/vimrc/third-party/ctrlp
 
+execute pathogen#infect('PROFILE_TOP/vimrc/third-party/{}')
+
 "set nocompatible              " be iMproved, required
 "filetype off                  " required
 "
