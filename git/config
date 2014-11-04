@@ -1,0 +1,46 @@
+[user]
+  name = Fasih
+  email = faskiri@instartlogic.com
+
+[alias]
+  a = add
+  b = branch
+  c = commit
+  d = diff
+  l = log
+  p = push
+  po = push origin
+  r = rebase
+  rc = rebase --continue
+  ra = rebase --abort
+  rem = rebase master
+  m = mergetool
+  s = status
+  co = checkout
+  com = checkout master
+  cp = cherry-pick
+  lo = log --pretty=oneline
+  ls = log --stat
+  rh = reset --hard
+  rt = reset
+  fo = !git fetch origin
+  st = stash
+  cob = checkout -b
+  cam = commit --amend
+  pom = push origin master
+
+[color]
+  ui = auto
+
+[diff "vimdiff"]
+  command = ~/.git/gitdiffwrapper.sh
+[pager]
+  diff = 
+
+[reviewboard]
+  url = https://reviewboard.insnw.net
+
+[core]
+  excludesfile = /home/faskiri/.git/info/exclude
+[diff]
+  external = ~/.git/gitdiffwrapper.sh
